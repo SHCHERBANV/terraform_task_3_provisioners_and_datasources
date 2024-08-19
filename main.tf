@@ -85,11 +85,11 @@ resource "azurerm_virtual_machine" "main" {
     ]
 
     connection {
-      type        = "ssh"
-      user        = var.admin_username
-      password    = var.admin_password
-      host        = azurerm_public_ip.main.ip_address
-      timeout     = "5m"
+      type     = "ssh"
+      user     = var.admin_username
+      password = var.admin_password
+      host     = azurerm_public_ip.main.ip_address
+      timeout  = "5m"
     }
   }
 
@@ -99,11 +99,11 @@ resource "azurerm_virtual_machine" "main" {
     destination = "/var/www/html/index.html"
 
     connection {
-      type        = "ssh"
-      user        = var.admin_username
-      password    = var.admin_password
-      host        = azurerm_public_ip.main.ip_address
-      timeout     = "5m"
+      type     = "ssh"
+      user     = var.admin_username
+      password = var.admin_password
+      host     = azurerm_public_ip.main.ip_address
+      timeout  = "5m"
     }
   }
 }
